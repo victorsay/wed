@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>wed — Research Project Reports</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a2332;
+      --muted: #4a5568;
+      --paper: #f7f9fc;
+      --accent: #0d7377;
+      --accent-soft: rgba(13, 115, 119, 0.12);
+      --glow: rgba(26, 35, 50, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Source Sans 3", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, #c8e6e8 0%, transparent 55%),
+        radial-gradient(ellipse 60% 40% at 100% 0%, #d4dde8 0%, transparent 50%),
+        linear-gradient(165deg, #eef3f7 0%, var(--paper) 45%, #e8eef4 100%);
+      line-height: 1.65;
+    }
+
+    .page {
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: clamp(3rem, 10vw, 6rem) clamp(1.25rem, 4vw, 2rem) 4rem;
+    }
+
+    .brand {
+      font-family: "Fraunces", serif;
+      font-size: clamp(2.75rem, 8vw, 4rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      line-height: 1.05;
+      opacity: 0;
+      animation: rise 0.7s ease forwards;
+    }
+
+    h1 {
+      font-family: "Fraunces", serif;
+      font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+      font-weight: 500;
+      margin-top: 1rem;
+      color: var(--accent);
+      opacity: 0;
+      animation: rise 0.7s ease 0.12s forwards;
+    }
+
+    .lede {
+      margin-top: 0.75rem;
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 34rem;
+      opacity: 0;
+      animation: rise 0.7s ease 0.22s forwards;
+    }
+
+    .guide {
+      margin-top: 2.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.15rem;
+    }
+
+    .guide p {
+      font-size: 1.05rem;
+      color: var(--ink);
+      padding-left: 1rem;
+      border-left: 3px solid var(--accent-soft);
+      opacity: 0;
+      animation: rise 0.65s ease forwards;
+    }
+
+    .guide p:nth-child(1) { animation-delay: 0.35s; }
+    .guide p:nth-child(2) { animation-delay: 0.45s; }
+    .guide p:nth-child(3) { animation-delay: 0.55s; }
+    .guide p:nth-child(4) { animation-delay: 0.65s; }
+    .guide p:nth-child(5) { animation-delay: 0.75s; }
+
+    .guide p:hover {
+      border-left-color: var(--accent);
+      transition: border-color 0.25s ease;
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .brand,
+      h1,
+      .lede,
+      .guide p {
+        animation: none;
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <p class="brand">wed</p>
+    <h1>How to Write a Research Project Report</h1>
+    <p class="lede">A practical guide for structuring clear, reproducible research writing.</p>
+
+    <section class="guide" aria-label="Report writing guide">
+      <p>A research project report should open with a clear title, abstract, and introduction that state the problem, purpose, and research questions.</p>
+      <p>Next, summarize relevant literature and explain your methods—design, data sources, tools, and analysis—so others can follow or reproduce your work.</p>
+      <p>Present findings objectively with tables or figures where helpful, then discuss what they mean, how they relate to prior research, and any limitations.</p>
+      <p>Close with conclusions and practical recommendations, and include a reference list plus appendices for raw data or extra material.</p>
+      <p>Keep the tone formal, structure sections with clear headings, and revise for clarity, accuracy, and consistent citation style.</p>
+    </section>
+  </main>
+</body>
+</html>
